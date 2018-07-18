@@ -4,21 +4,27 @@
 		<title>表单测试</title>
 	</head>
 	<body>
-		<form id="cForm">
-			<input type="text" placeholder="请输入内容" ck ck-type="empty"></br>
-			<input type="number" placeholder="请输入电话号码" ck ck-type="phone"></br>
-			<input id="btn" type="button" value="提交">
+		<form id="myForm">
+			<input type="text" ck ck-type="empty" ck-alert="请输入地址"></br>
+			<input type="number" ck ck-type="phone"></br>
+			<input type="text" ck ck-type="email"></br>
+			<input type="text" ck ck-match="/^[0-9]+.?[0-9]*$/" ck-alert="请输入正确的数字"></br>
+			<input id="submit" type="button" value="提交">
 		</form>
 		<script src="./dist/checkForm.js"></script>
 		<script>
 			
-			var btn = document.getElementById('btn');
+			var submit = document.getElementById('submit');
 			
-			btn.addEventListener('click',function(){
-				var obj = checkForm({
-					el: 'cForm'
+			submit.addEventListener('click',function(){
+				var res = checkForm({
+					el: 'myForm'
 				})
-				console.log(obj);
+				if(!res.result) {
+					alert(res.info);
+				}else {
+					//todo
+				}
 			})
 			
 		</script>
