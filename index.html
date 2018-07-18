@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单测试</title>
+	</head>
+	<body>
+		<form id="cForm">
+			<input type="text" placeholder="请输入内容" ck ck-type="empty"></br>
+			<input type="number" placeholder="请输入电话号码" ck ck-type="phone"></br>
+			<input id="btn" type="button" value="提交">
+		</form>
+		<script src="./dist/checkForm.js"></script>
+		<script>
+			
+			var btn = document.getElementById('btn');
+			
+			btn.addEventListener('click',function(){
+				var obj = checkForm({
+					el: 'cForm'
+				})
+				console.log(obj);
+			})
+			
+		</script>
+	</body>
+</html>
