@@ -6,9 +6,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'checkForm.js',
-//     libraryTarget: 'umd',
-//     umdNamedDefine: true
+    filename: 'formcheck.js',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [
@@ -33,11 +33,11 @@ module.exports = {
           'sass-loader?indentedSyntax'
         ],
       },
-//       {
-//         test: /\.js$/,
-//         loader: 'babel-loader',
-//         exclude: /node_modules/
-//       },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',

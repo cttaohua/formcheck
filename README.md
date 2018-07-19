@@ -1,22 +1,24 @@
-# checkform
+# formcheck
 一个表单验证的js插件，不依赖任何框架
 
 # 安装
 ```
 npm 的方式
-npm install v-dplayer --save
+npm install formcheck --save
 或
-cnpm insatll v-dplayer --save
+cnpm insatll formcheck --save
 
 支持CDN引入
-<script src="https://github.com/cttaohua/checkform.git"></script>
+git地址：https://github.com/cttaohua/formcheck
+下载下来后引入dist文件夹下得formcheck.js
+<script src="./dist/formcheck.js"></script>
 
 ```
 
 # 使用
 - 在main.js中添加
 ```JavaScript
-import VDplayer from 'v-dplayer'
+import formcheck from 'formcheck'
 ```
 - 在html中使用
 ```html
@@ -32,7 +34,7 @@ import VDplayer from 'v-dplayer'
 - 在js中使用
 1、在需要验证的input上加ck
 2、需要定义判断的类型，如ck-type="phone"，就按手机号处理，未定义则按必填字段处理
-3、可以自定义提示语句，ck-alert="[自定义]"，未定义checkform会有默认的提示,见下方
+3、可以自定义提示语句，ck-alert="[自定义]"，未定义formcheck会有默认的提示,见下方
 4、也可以直接传入一个正则匹配，ck-match="/^[0-9]+.?[0-9]*$/"
 ```Javascript
 var submit = document.getElementById('submit');
@@ -49,7 +51,7 @@ submit.addEventListener('click',function(){
 })
 ```
 
-调用checkForm会返回一个对象，其中包括两个属性
+调用formcheck会返回一个对象，其中包括两个属性
 1、result  result为true表示表单验证通过，为false表示有的项验证不通过
 2、info    info返回的是需要提示的信息checkform会有一些默认提示
 
@@ -64,7 +66,7 @@ submit.addEventListener('click',function(){
     email: 'email'     //邮箱
 }
 ```
-- checkForm默认设定的提示语
+- formcheck默认设定的提示语
 ```
 {
     phone: '请输入正确的手机号',

@@ -11,13 +11,13 @@
 			<input type="text" ck ck-match="/^[0-9]+.?[0-9]*$/" ck-alert="请输入正确的数字"></br>
 			<input id="submit" type="button" value="提交">
 		</form>
-		<script src="./dist/checkForm.js"></script>
+		<script src="./dist/formcheck.js"></script>
 		<script>
 			
 			var submit = document.getElementById('submit');
 			
 			submit.addEventListener('click',function(){
-				var res = checkForm({
+				var res = formcheck({
 					el: 'myForm'
 				})
 				if(!res.result) {

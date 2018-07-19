@@ -7,7 +7,7 @@ var numberMatch = matchRule.numberMatch;
 var emailMatch = matchRule.emailMatch;
 
 
-function checkForm(params) {
+function formcheck(params) {
 
     var id = params['el'];
 
@@ -102,7 +102,7 @@ function checkForm(params) {
 
 }
 
-window.checkForm = checkForm;
+window.formcheck = formcheck;
 
-export default checkForm
+export default formcheck
 
