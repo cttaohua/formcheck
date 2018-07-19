@@ -10,7 +10,7 @@ cnpm insatll formcheck --save
 
 支持CDN引入
 git地址：https://github.com/cttaohua/formcheck
-下载下来后引入dist文件夹下得formcheck.js
+下载下来后引入dist文件夹下的formcheck.js
 <script src="./dist/formcheck.js"></script>
 
 ```

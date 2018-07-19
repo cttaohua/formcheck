@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "chentan <18410150050@163.com>",
   "main": "index.js",
+	"key": "form validation",
   "license": "MIT",
   "private": false,
   "repository": {
